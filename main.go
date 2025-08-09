@@ -3,7 +3,6 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"log"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -78,6 +77,5 @@ func getTweets(c *gin.Context) {
 func main() {
 	r := gin.Default()
 	r.GET("/tweets", getTweets)
-	log.Println("🚀 Server running at http://192.168.1.9:8080")
 	r.Run(":8080")
 }
